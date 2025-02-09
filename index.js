@@ -41,10 +41,8 @@ function runQuiz(){
         if (userAnswer === questionsArr[i].answer) {
             correctAnswer++
         } 
-        console.log(correctAnswer)
     }
     var percentage =Math.round((correctAnswer/questionsArr.length) * 100);
     alert('Final Score ' + percentage + '%')
-    console.log(percentage)
 }
 
