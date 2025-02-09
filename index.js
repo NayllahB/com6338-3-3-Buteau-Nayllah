@@ -20,12 +20,22 @@ var questionsArr = [
     {
         question: 'Toronto is located in Canada',
         answer: true
+    },
+    {
+        question: 'Syndey is located in Australia',
+        answer: true
+    },
+    {
+        question: 'London is located in the United Kingdom',
+        answer: true
     }
 ]
 
-correctAnswer = 0;
+
 
 function runQuiz(){
+    var correctAnswer = 0;
+
     for(var i = 0; i<questionsArr.length; i++){
         var userAnswer = confirm(questionsArr[i].question)
         if (userAnswer === questionsArr[i].answer) {
@@ -33,12 +43,8 @@ function runQuiz(){
         } 
         console.log(correctAnswer)
     }
-    if (correctAnswer >= 0) {
-        var percentage =(correctAnswer/questionsArr.length) * 100;
-        alert('Final Score ' + percentage + '%')
-        console.log(percentage)
-        
-    }
-    
+    var percentage =Math.round((correctAnswer/questionsArr.length) * 100);
+    alert('Final Score ' + percentage + '%')
+    console.log(percentage)
 }
 
